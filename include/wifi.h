@@ -3,7 +3,11 @@
 
 #include <stdbool.h>
 
+#include "state.h"
+
+bool wifi_check_connectivity();
 void wifi_init();
-void send_temperature_data(float temperature, bool forcedHeatActive, bool highHighCondition, bool startupCondition, bool emberPreservationActive);
+void wifi_connect();
+void send_temperature_data(float temperature, const FurnaceState *state);
 
 #endif
